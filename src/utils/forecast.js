@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error.info, undefined);
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. But it feels like " + body.current.feelslike + " degrees out. The wind direction is: " + body.current.wind_dir + ". While the humidity is: " + body.current.humidity + " .")
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. But it feels like " + body.current.feelslike + " degrees out. The wind direction is: " + body.current.wind_dir + ". While the humidity is: " + body.current.humidity + "%.")
         }
     })
 
